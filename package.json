@@ -1,0 +1,15 @@
+{
+  "name": "icoid",
+  "version": "0.1.0",
+  "description": "Minimalistic API gateway",
+  "main": "index.js",
+  "repository": "https://github.com/rajikaimal/icoid",
+  "author": "rajikaimal <inbox.rajika@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "helmet": "^3.5.0",
+    "prettier": "^1.2.2"
+  }
+}
