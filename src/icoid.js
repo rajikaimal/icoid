@@ -1,7 +1,8 @@
-let express = require("express");
-let app = express();
-
 function Icoid() {
+	const express = require("express");
+	const app = express();
+	const request = require("request");
+
 	function init(host, port) {
 		const uri = `${host}:${port}`;
 
@@ -13,8 +14,25 @@ function Icoid() {
 		});
 	}
 
+	function mapEndpoints(endPoints) {
+		if (!endPoints) return;
+
+		if (app) {
+			endPoints.map(endPoint => {
+				let type = endPoint.type;
+				let url = endPoint.url;
+				let mappedUrl = endPont.mappedUrl;
+
+				app.type(url, (req, res) => {
+					//fetch with request
+				});
+			});
+		}
+	}
+
 	return {
-		init: init
+		init: init,
+		mapEndpoints: mapEndpoints
 	};
 }
 
