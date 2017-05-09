@@ -14,8 +14,12 @@ yarn add icoid
 
 ## API
 
-### Icoid.init
+### icoid.init
 
->> WIP
+### icoid.mapEndpoints
+
+### icoid.helmet(options)
+
+### icoid.app.use()
 
 MIT © [Rajika Imal](https://rajikaimal.github.io)
