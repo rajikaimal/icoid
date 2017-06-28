@@ -1,3 +1,3 @@
-const Icoid = require("./src/icoid");
+const icoid = require("./src/icoid");
 
-module.exports = Icoid;
+module.exports = icoid;

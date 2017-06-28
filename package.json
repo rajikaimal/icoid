@@ -1,7 +1,7 @@
 {
   "name": "icoid",
   "version": "0.1.0",
-  "description": "Minimalistic API gateway",
+  "description": "Modular API gateway",
   "main": "index.js",
   "repository": "https://github.com/rajikaimal/icoid",
   "author": "rajikaimal <inbox.rajika@gmail.com>",

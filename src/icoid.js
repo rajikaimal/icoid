@@ -1,17 +1,19 @@
-function Icoid() {
-	const express = require("express");
-	const app = express();
-	const request = require("request");
+const express = require("express");
+const request = require("request");
 
-	function init(host, port) {
+function icoid() {
+	const app = express();
+
+	function init(host, port, resolve) {
 		const uri = `${host}:${port}`;
 
-		return new Promise((resolve, reject) => {
+		// return new Promise((resolve, reject) => {
 			app.listen(uri, () => {
-				console.log(`Icoid running on ${uri}`);
-				resolve(app);
+				// if(err) reject(err);
+
+				resolve(uri);
 			});
-		});
+		// });
 	}
 
 	function mapEndpoints(endPoints) {
@@ -30,9 +32,18 @@ function Icoid() {
 		}
 	}
 
+	function helmet(config) {
+		if (!config) {
+			app.use(helmet(config));
+		}
+
+		app.use(helmet());
+	}
+
 	return {
-		init: init,
-		mapEndpoints: mapEndpoints
+		init,
+		mapEndpoints,
+		helmet
 	};
 }
 
@@ -42,4 +53,4 @@ process.on("uncaughtException", err => {
 	});
 });
 
-module.exports = Icoid;
+module.exports = icoid;
