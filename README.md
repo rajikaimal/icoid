@@ -1,5 +1,7 @@
 # Icoid
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rajikaimal/icoid.svg)](https://greenkeeper.io/)
+
 :ghost: Modular API gateway
 
 ## Installation
